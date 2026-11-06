@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2026 at 07:18 PM
+-- Generation Time: Nov 06, 2026 at 11:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,6 +36,15 @@ CREATE TABLE `loans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `loans`
+--
+
+INSERT INTO `loans` (`id`, `item`, `borrower`, `due_date`, `returned`) VALUES
+(1, 'Witch hat', 'Maya', '2026-11-02', 0),
+(2, 'Vampire cape', 'Jordan', '2026-11-01', 0),
+(3, 'Skeleton mask', 'Sam', '2026-11-03', 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -53,7 +62,7 @@ ALTER TABLE `loans`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
