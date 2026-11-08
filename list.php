@@ -21,6 +21,7 @@ if (!$result) {
         <th>Item</th>
         <th>Borrower</th>
         <th>Due Date</th>
+        <th>Returned</th>
     </tr>
 
     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -29,6 +30,19 @@ if (!$result) {
             <td><?php echo $row["borrower"]; ?></td>
             <td><?php echo $row["due_date"]; ?></td>
             <td>
+                <?php
+                if ($row["returned"]) {
+                    echo "Yes";
+                } else {
+                    echo "No";
+                }
+                ?>
+            </td>
+            <td>
+                <a href="mark_returned.php?id=<?php echo $row["id"]; ?>">
+                    Mark returned
+                </a>
+                |
                 <a href="delete.php?id=<?php echo $row["id"]; ?>">
                     Delete
                 </a>
