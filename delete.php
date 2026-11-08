@@ -1,18 +1,18 @@
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "costume_closet");
+$conn = mysqli_connect("localhost", "root", "", "costume_closet"); //Connects to DB
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error()); //
 }
 
-$id = $_GET["id"];
+$id = $_GET["id"]; //Gather ID
 
-$sql = "DELETE FROM loans WHERE id = $id";
+$sql = "DELETE FROM loans WHERE id = $id"; //Delete ID from DB
 
-mysqli_query($conn, $sql);
+mysqli_query($conn, $sql); //Query
 
-header("Location: list.php");
+header("Location: list.php"); //Go back to list
 exit;
 
 ?>
