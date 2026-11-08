@@ -47,7 +47,7 @@ if (mysqli_num_rows($result) > 0){ //table has to have 1 or more loans to displa
                     Mark Returned
                 </a>
                 |
-                <a href="delete.php?id=<?php echo $row["id"]; ?>">
+                <a href="delete.php?id=<?php echo $row["id"]; ?>"onclick="return confirm('Are you sure you want to delete this loan?')"> <!--Confirmation screen !-->
                     Delete
                 </a>
             </td>

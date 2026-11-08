@@ -6,7 +6,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error()); //
 }
 
-$id = $_GET["id"]; //Gather ID
+$id = (int) $_GET["id"]; //Gather ID
 
 $sql = "DELETE FROM loans WHERE id = $id"; //Delete ID from DB
 

@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Checks the form
     $borrower = $_POST["borrower"];
     $due_date = $_POST["due_date"];
 
-//Use the loan and puts it into the database while avoiding sql injections
+//Prepare SQL
     $sql = "INSERT INTO loans (item, borrower, due_date)
             VALUES (?, ?, ?)";
 
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Checks the form
 ?>
 
 
-//Form used to display
+<!--//Form used to display!-->
 <form method="post">
     Item: <input type="text" name="item" required><br><br>
     Borrower: <input type="text" name="borrower" required><br><br>
